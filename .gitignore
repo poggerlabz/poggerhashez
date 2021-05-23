@@ -1,5 +1,4 @@
 build/
 node_modules/
-addon.js
 client.js
 server.js
