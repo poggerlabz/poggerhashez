@@ -1,6 +1,6 @@
 #include <emscripten.h>
 #include <emscripten/bind.h>
-#include "../cpp/HashifyName.h"
+#include "HashifyName.h"
 
 using namespace emscripten;
 
