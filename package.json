@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "install": "npm run-script build:addon && npm run-script build:client && npm run-script build:server",
+    "install": "npm run-script build:addon",
     "build:addon": "node-gyp configure && node-gyp build",
     "build:client": "em++ --std=c++11 --bind cpp/HashifyNameBindings.cpp -I/cpp cpp/HashifyName.cpp -s MODULARIZE=1 -s WASM=0 -s WASM_ASYNC_COMPILATION=0 -s ENVIRONMENT='web' -s EXPORT_ES6=0 -s USE_ES6_IMPORT_META=0 -o ./client.js",
     "build:server": "em++ --std=c++11 --bind cpp/HashifyNameBindings.cpp -I/cpp cpp/HashifyName.cpp -s MODULARIZE=1 -s WASM=0 -s WASM_ASYNC_COMPILATION=0 -s ENVIRONMENT='node' -s EXPORT_ES6=0 -s USE_ES6_IMPORT_META=0 -o ./server.js",
