@@ -1,3 +1,4 @@
+#include <cmath>
 #include "HashifyName.h"
 
 unsigned int HashifyName::murmurGen(std::string key){
@@ -53,7 +54,7 @@ std::u16string HashifyName::generateHashedName(unsigned int hash) {
   unsigned int size = (unsigned int)(0x9fa5) - (unsigned int)(0x4e00),
     x;
   std::u16string name;
-  for (x = hash; x > size; x = floor(x / size)) {
+  for (x = hash; x > size; x = std::floor(x / size)) {
     name = getAlphabeticChar(x % size) + name;
   }
   name = getAlphabeticChar(x % size) + name;
